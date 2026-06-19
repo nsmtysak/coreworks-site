@@ -68,10 +68,11 @@
   .stats{background:#fff; border-bottom:1px solid var(--line);}
   .stats .wrap{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding-top:36px; padding-bottom:36px;}
   .stat{text-align:center; padding:4px;}
-  .stat .ic{width:50px; height:50px; margin:0 auto 13px; border-radius:15px; background:var(--orange-soft); display:flex; align-items:center; justify-content:center;}
-  .stat .ic svg{width:28px; height:28px;}
-  .stat .ttl{font-size:16px; font-weight:800; color:var(--navy); line-height:1.45;}
-  .stat .sub{font-size:12.5px; color:var(--muted); margin-top:7px; line-height:1.65;}
+  .stat .head{display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:11px;}
+  .stat .ic{width:46px; height:46px; border-radius:13px; background:var(--orange-soft); display:flex; align-items:center; justify-content:center; flex:none;}
+  .stat .ic svg{width:26px; height:26px;}
+  .stat .ttl{font-size:17px; font-weight:800; color:var(--navy); line-height:1.35; text-align:left;}
+  .stat .sub{font-size:14px; color:var(--muted); line-height:1.7;}
 
   /* ---------- sections ---------- */
   section{padding:58px 0;}
@@ -151,15 +152,21 @@
   .check .mk svg{width:14px; height:14px;}
 
   /* ---------- contact ---------- */
-  .contact{position:relative; overflow:hidden; background:linear-gradient(160deg,#23456b 0%, var(--navy-deep) 100%); color:#fff; text-align:center;}
-  .contact .grid-dots{position:absolute; inset:0; opacity:.08; background-image:radial-gradient(#fff 1.1px, transparent 1.1px); background-size:26px 26px;}
-  .contact .blob{position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(226,100,27,.4), transparent 70%); top:-100px; right:-80px;}
+  .contact{position:relative; overflow:hidden; background:linear-gradient(168deg,#2a5079 0%, var(--navy) 46%, var(--navy-deep) 100%); color:#fff; text-align:center;}
+  .contact::before{content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, transparent 6%, var(--orange) 50%, transparent 94%); opacity:.85;}
+  .contact .grid-dots{position:absolute; inset:0; opacity:.07; background-image:radial-gradient(#fff 1.1px, transparent 1.1px); background-size:26px 26px;}
+  .contact .blob{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(226,100,27,.5), transparent 70%); top:-130px; right:-90px; filter:blur(2px); pointer-events:none;}
+  .contact .blob.cool{width:300px; height:300px; background:radial-gradient(circle, rgba(96,156,224,.26), transparent 70%); top:auto; bottom:-150px; left:-110px; right:auto;}
   .contact .wrap{position:relative; z-index:2;}
-  .contact h2{color:#fff; font-size:25px; font-weight:800; margin-bottom:14px; text-wrap:balance;}
+  .contact .eyebrow{color:#f0a266;}
+  .contact h2{color:#fff; font-size:25px; font-weight:800; margin:9px 0 14px; text-wrap:balance;}
   .contact p{color:#cdd9e6; max-width:560px; margin:0 auto 28px; font-size:15px; text-wrap:pretty;}
   .contact a.mail{display:inline-flex; align-items:center; gap:10px; background:var(--orange); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:15px 32px; border-radius:999px; box-shadow:0 14px 30px -10px rgba(226,100,27,.7);}
   .contact a.mail svg{width:20px; height:20px;}
-  .contact .meta{margin-top:24px; font-size:13.5px; color:#9fb2c6; line-height:2;}
+  .contact .signoff{margin-top:32px; display:flex; align-items:center; justify-content:center; gap:15px;}
+  .contact .signoff::before,.contact .signoff::after{content:""; width:34px; height:1px; background:linear-gradient(90deg, transparent, rgba(159,178,198,.55));}
+  .contact .signoff::after{background:linear-gradient(90deg, rgba(159,178,198,.55), transparent);}
+  .contact .signoff span{font-size:13px; color:#bccadb; letter-spacing:.3em; text-transform:uppercase; font-weight:800;}
 
   footer.site{background:var(--navy-deep); color:#8ea3b8; text-align:center; padding:28px 0; font-size:12.5px;}
   footer.site .tagline{letter-spacing:.18em; text-transform:uppercase; font-size:11px;}
@@ -279,18 +286,24 @@
 <div class="stats">
   <div class="wrap">
     <div class="stat">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#E2641B" stroke-width="1.8"/><line x1="16" y1="16" x2="21" y2="21" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-      <div class="ttl">課題から始める</div>
+      <div class="head">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#E2641B" stroke-width="1.8"/><line x1="16" y1="16" x2="21" y2="21" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="ttl">課題から始める</div>
+      </div>
       <div class="sub">業種は問いません。あなたの「無駄」ひとつから。</div>
     </div>
     <div class="stat">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round"/><path d="M12.6 11V9.4a1.6 1.6 0 0 1 3.2 0V11M15.8 11v-1a1.6 1.6 0 0 1 3.2 0v4.4a5.4 5.4 0 0 1-5.4 5.4h-1.3a4.4 4.4 0 0 1-3.3-1.5l-3-3.4a1.7 1.7 0 0 1 2.4-2.4L9 13.6" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="ttl">説明いらずで使える</div>
+      <div class="head">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round"/><path d="M12.6 11V9.4a1.6 1.6 0 0 1 3.2 0V11M15.8 11v-1a1.6 1.6 0 0 1 3.2 0v4.4a5.4 5.4 0 0 1-5.4 5.4h-1.3a4.4 4.4 0 0 1-3.3-1.5l-3-3.4a1.7 1.7 0 0 1 2.4-2.4L9 13.6" stroke="#E2641B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="ttl">説明いらずで使える</div>
+      </div>
       <div class="sub">現場の人が、その日から。シンプルさを最優先に。</div>
     </div>
     <div class="stat">
-      <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#E2641B" stroke-width="1.8"/><path d="M9 9.5l3 3 3-3M12 12.5V16" stroke="#E2641B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="9.5" y1="13.5" x2="14.5" y2="13.5" stroke="#E2641B" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-      <div class="ttl">ムダな費用をかけない</div>
+      <div class="head">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#E2641B" stroke-width="1.8"/><path d="M9 9.5l3 3 3-3M12 12.5V16" stroke="#E2641B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><line x1="9.5" y1="13.5" x2="14.5" y2="13.5" stroke="#E2641B" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="ttl">ムダな費用をかけない</div>
+      </div>
       <div class="sub">大がかりなシステムは不要。身近な技術で、最小限のコストで。</div>
     </div>
   </div>
@@ -536,16 +549,16 @@
 <section class="contact" id="contact">
   <span class="grid-dots"></span>
   <span class="blob"></span>
+  <span class="blob cool"></span>
   <div class="wrap">
+    <div class="eyebrow">お気軽にどうぞ</div>
     <h2>その「面倒」、一度ぶつけてみてください。</h2>
     <p>どんな小さな作業でも構いません。まずは困りごとをお聞かせください。本当に仕組みで解けるかを、一緒に見極めます。ご相談は無料です。</p>
     <a class="mail" href="mailto:nishimoto.sr@gmail.com?subject=CoreWorksへの相談">
       <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#fff" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       メールで相談する
     </a>
-    <div class="meta">
-      CoreWorks　西本 佳哲
-    </div>
+    <div class="signoff"><span>CoreWorks</span></div>
   </div>
 </section>
 
