@@ -55,6 +55,12 @@
   .btn:active{transform:translateY(1px);}
   .btn.primary{background:var(--orange); color:#fff; box-shadow:0 10px 24px -8px rgba(226,100,27,.7);}
   .btn.ghost{background:#fff; color:var(--navy); border:1.5px solid var(--line); box-shadow:var(--shadow-sm);}
+  /* subtle scroll cue (replaces the old hero buttons) */
+  .hero .scroll-link{display:inline-flex; align-items:center; gap:7px; margin-top:26px; font-size:14px; font-weight:700; color:var(--navy); text-decoration:none; border-bottom:1.5px solid rgba(27,58,91,.22); padding-bottom:3px; transition:color .15s ease, border-color .15s ease;}
+  .hero .scroll-link:hover{color:var(--orange); border-color:var(--orange);}
+  .hero .scroll-link svg{width:15px; height:15px; animation:nudge 1.8s ease-in-out infinite;}
+  @keyframes nudge{0%,100%{transform:translateY(0);}50%{transform:translateY(3px);}}
+  @media(prefers-reduced-motion:reduce){.hero .scroll-link svg{animation:none;}}
 
   /* hero device strip */
   .hero-devices{margin-top:46px; display:flex; align-items:flex-end; justify-content:center; gap:26px; flex-wrap:wrap;}
@@ -213,6 +219,7 @@
     <span class="tag">Applications for Core Focus</span>
     <h1>その作業、<span class="accent">本当に</span><br class="brk">あなたがやることですか？<span class="big">無駄な作業を、なくす。</span></h1>
     <p class="lead">CoreWorks は、毎日くり返される<br class="brk">“本質的でない作業”を見つけ出し、<br class="brk">課題にちょうど合った仕組みで消していく会社です。<br class="brk">空いた時間を、あなたが<br class="brk"><strong>本質的な（コアとなる）仕事</strong>に集中するために。</p>
+    <a class="scroll-link" href="#products">実績を見る<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
     <!-- floating device mockups -->
     <div class="hero-devices">
