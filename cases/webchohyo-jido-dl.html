@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>複数サイトへの「毎日ログイン」をなくす方法｜Web帳票自動ダウンロードの実例 - CoreWorks</title>
+<meta name="description" content="30以上の取引先サイトに毎日ログインし、請求書・納品書を一つずつ手作業でダウンロードしていませんか。ある商社の事務部門が、その作業を自動化した実例を紹介します。">
+<meta property="og:title" content="複数サイトへの「毎日ログイン」をなくす方法｜CoreWorks">
+<meta property="og:description" content="取引先サイトを毎日巡回してダウンロードする作業をなくした実例。">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#1B3A5B">
+<link rel="canonical" href="https://cw-app.jp/cases/webchohyo-jido-dl.html">
+<style>
+  :root{
+    --navy:#1B3A5B; --navy-deep:#13283f; --orange:#E2641B; --orange-soft:#fbeede;
+    --ink:#1d2530; --muted:#5f6b7a; --line:#e6eaf0; --soft:#f6f8fb; --softer:#fafbfd;
+    --shadow-sm:0 8px 24px -12px rgba(19,40,63,.22);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo",sans-serif; color:var(--ink); line-height:1.9; background:#fff; font-size:16px; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px; margin:0 auto; padding:0 22px;}
+  a{color:var(--navy);}
+
+  header.site{padding:4px 0; border-bottom:1px solid var(--line); position:sticky; top:0; background:rgba(255,255,255,.94); backdrop-filter:blur(10px); z-index:30;}
+  header.site .wrap{max-width:960px; display:flex; align-items:center; justify-content:space-between;}
+  header.site img{height:40px; width:auto;}
+  header.site a.cta{font-size:13px; font-weight:700; color:#fff; background:var(--orange); padding:9px 17px; border-radius:999px; text-decoration:none;}
+
+  .crumb{font-size:13px; color:var(--muted); padding:20px 0 0;}
+  .crumb a{color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line);}
+  .crumb a:hover{color:var(--orange); border-color:var(--orange);}
+
+  article{padding:20px 0 10px;}
+  .eyebrow{font-size:12px; letter-spacing:.18em; color:var(--orange); font-weight:800; text-transform:uppercase;}
+  h1{font-size:28px; line-height:1.5; color:var(--navy); font-weight:800; margin:10px 0 18px; text-wrap:balance;}
+  p.lead{font-size:16.5px; color:#46586b; margin-bottom:30px;}
+
+  h2{font-size:20px; color:var(--navy); font-weight:800; margin:40px 0 14px; padding-top:6px; border-top:1px solid var(--line);}
+  h2:first-of-type{border-top:none; padding-top:0;}
+  p{margin-bottom:18px; color:var(--ink);}
+  strong{color:var(--navy);}
+
+  .quote{background:var(--soft); border-left:4px solid var(--orange); border-radius:8px; padding:18px 20px; margin:22px 0; font-size:15px; color:#33404f;}
+
+  .ba{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0;}
+  .ba .col{border-radius:12px; padding:18px; border:1px solid var(--line);}
+  .ba .b{background:#fff8f4;}
+  .ba .a{background:#f2f8f5;}
+  .ba .ll{font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:8px;}
+  .ba .b .ll{color:var(--orange);}
+  .ba .a .ll{color:#1f7a4c;}
+  .ba .txt{font-size:14.5px; color:#3a4654; line-height:1.75;}
+
+  ul.checks{list-style:none; margin:20px 0;}
+  ul.checks li{display:flex; align-items:flex-start; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); font-size:15px;}
+  ul.checks li:last-child{border-bottom:none;}
+  ul.checks li svg{flex:none; margin-top:3px; color:var(--orange);}
+
+  .cta-box{background:var(--navy); color:#fff; border-radius:16px; padding:30px 26px; margin:38px 0; text-align:center;}
+  .cta-box h3{font-size:19px; margin-bottom:10px; font-weight:800;}
+  .cta-box p{color:#c9d4e0; font-size:14.5px; margin-bottom:20px;}
+  .cta-box .btns{display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .btn{display:inline-block; text-decoration:none; font-weight:700; font-size:14.5px; padding:12px 24px; border-radius:999px;}
+  .btn.primary{background:var(--orange); color:#fff;}
+  .btn.ghost{background:rgba(255,255,255,.08); color:#fff; border:1.5px solid rgba(255,255,255,.35);}
+
+  .principle{text-align:center; padding:36px 0 10px; color:var(--muted); font-size:14.5px; border-top:1px solid var(--line); margin-top:20px;}
+  .principle strong{color:var(--navy); display:block; font-size:16.5px; margin-bottom:6px;}
+
+  footer.site{padding:30px 0; border-top:1px solid var(--line); text-align:center; color:var(--muted); font-size:12.5px; margin-top:20px;}
+  footer.site a{color:var(--muted);}
+
+  @media(max-width:600px){
+    .ba{grid-template-columns:1fr;}
+    h1{font-size:23px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="../index.html"><img src="../assets/logo.png" alt="CoreWorks"></a>
+    <a class="cta" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumb"><a href="../index.html">CoreWorks</a> ／ 事例</div>
+
+  <article>
+    <div class="eyebrow">導入事例｜商社・事務部門</div>
+    <h1>毎日30サイトへのログイン、もう手作業でなくていい。</h1>
+    <p class="lead">取引先ごとのサイトにログインして、請求書や納品書を集める作業に追われていませんか。ある商社の事務部門が、その「当たり前」の作業を手放すまでの話です。</p>
+
+    <h2>毎日繰り返していた、あの巡回作業</h2>
+    <p>取引先は30社以上。それぞれ別々のサイトにID・パスワードでログインし、新しい請求書や納品書が出ていないかを確認し、あれば一つずつダウンロードしてフォルダに保存する。この作業を、毎日繰り返す。1社あたりは数分でも、30社分となれば、それだけで小一時間かかる。しかも「見落としていないか」「ログインし忘れていないか」という不安は、常につきまとっていた。</p>
+    <div class="quote">「確認は毎日のこと。だから誰も"おかしい"と思わなくなっていた」——取引先が多い事務部門ほど、この作業は膨らんでいきます。</div>
+
+    <h2>なぜ、この無駄はなくならないのか</h2>
+    <p>取引先が増えるほど、確認しなければならないサイトの数も比例して増えていきます。ところがサイトの仕様は取引先ごとにバラバラで、統一されたやり方は存在しません。「人が一つずつ見て回る」以外に方法がないと思われがちですが、実際には——<strong>決まった手順を、決まったタイミングで繰り返す作業</strong>は、パソコンに任せられる典型的な無駄です。</p>
+    <p>必要だったのは、「巡回そのもの」を人の仕事から外すという発想でした。</p>
+
+    <h2>変わったこと</h2>
+    <div class="ba">
+      <div class="col b">
+        <div class="ll">Before</div>
+        <div class="txt">30以上の取引先サイトに毎日ログインし、請求書・納品書を一つひとつ手作業でダウンロードしていた。</div>
+      </div>
+      <div class="col a">
+        <div class="ll">After</div>
+        <div class="txt">パソコンが全サイトを自動巡回し、新しい帳票だけを自動保存。手作業と確認漏れがゼロに。</div>
+      </div>
+    </div>
+    <p>毎日の巡回作業そのものがなくなりました。人が手を動かすのは、自動で保存されたファイルを確認するときだけ。「見落としていないか」という不安からも解放されています。</p>
+
+    <h2>こんな心当たり、ありませんか</h2>
+    <ul class="checks">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>取引先ごとに、別々のサイトへログインしている</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>新しい帳票が出ていないか、毎回目視で確認している</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>確認漏れ・ダウンロード漏れが、いつも少し不安</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>取引先が増えるたび、この作業も比例して増えている</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>この巡回作業、ゼロにできます。</h3>
+      <p>パソコンが決まった時間に全サイトを自動巡回。新しい帳票だけを自動で保存する「Web帳票 自動ダウンロード」。</p>
+      <div class="btns">
+        <a class="btn primary" href="https://nsmtysak.github.io/webchohyo-lp/" target="_blank" rel="noopener">仕組みの詳細を見る</a>
+        <a class="btn ghost" href="mailto:info@cw-app.jp?subject=Web帳票自動ダウンロードの相談">無料で相談する</a>
+      </div>
+    </div>
+
+    <div class="principle">
+      <strong>無駄をなくすのは、目的ではありません。</strong>
+      目的は、あなたが本質的な仕事に集中できるようにすること。<br>
+      <a href="../index.html">CoreWorksについてもっと見る →</a>
+    </div>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">Applications for Core Focus ／ © 2026 CoreWorks</div>
+</footer>
+
+</body>
+</html>
