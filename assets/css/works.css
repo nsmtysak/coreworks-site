@@ -1,0 +1,126 @@
+/* ==========================================================
+   導入実績ページ共通（/juchu/ /mitsumori/ /unyo/）
+   site.css の上に重ねる。アクセント色は body の --c で指定
+   ========================================================== */
+.wk { --c: var(--cw-accent); }
+
+/* ヒーロー */
+.wk-hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  padding: 72px 0 96px;
+  background:
+    radial-gradient(900px 520px at 90% -10%, color-mix(in srgb, var(--c) 30%, transparent), transparent 62%),
+    radial-gradient(600px 400px at -10% 110%, color-mix(in srgb, var(--c) 12%, transparent), transparent 60%),
+    var(--cw-bg);
+}
+.wk-hero__in { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; }
+.wk-back { display: inline-block; font-size: 13px; color: var(--cw-muted); text-decoration: none; margin-bottom: 22px; }
+.wk-back:hover { color: #fff; }
+.wk-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 14px; border-radius: 999px; font-size: 13px; font-weight: 700;
+  background: color-mix(in srgb, var(--c) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); color: #fff;
+}
+.wk-badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.wk-hero h1 {
+  margin: 22px 0 0; font-weight: 900; line-height: 1.3; letter-spacing: .01em;
+  font-size: clamp(30px, 4.4vw, 52px);
+}
+.wk-hero h1 em { font-style: normal; color: var(--c); }
+.wk-lead { margin: 22px 0 0; font-size: 16px; line-height: 2; color: #d5dbe3; max-width: 32em; }
+.wk-tags { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.wk-tags li { font-size: 12.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--cw-line); color: var(--cw-muted); }
+
+/* 画面写真（ウィンドウ枠つき） */
+.wk-shot {
+  margin: 0; border-radius: 14px; overflow: hidden; background: #fff;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 40px 80px -34px color-mix(in srgb, var(--c) 60%, transparent), 0 0 0 8px rgba(255,255,255,.03);
+}
+.wk-shot__bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #20252d; }
+.wk-shot__bar i { width: 9px; height: 9px; border-radius: 50%; background: #3a414c; }
+.wk-shot__bar i:first-child { background: var(--c); }
+.wk-shot__bar span { margin-left: 10px; font-size: 12px; color: #8b95a3; }
+.wk-shot img { width: 100%; height: auto; display: block; }
+.wk-shot figcaption { padding: 10px 14px; font-size: 12px; color: #6b7482; background: #f3f4f6; }
+
+/* 課題（明るい面） */
+.wk-pains { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.wk-pain {
+  padding: 26px 24px; border-radius: var(--cw-radius); background: var(--cw-paper2);
+  border: 1px solid var(--cw-rule); border-top: 4px solid #c9c2b5;
+  box-shadow: 0 20px 40px -34px rgba(27,34,44,.45);
+}
+.wk-pain b { display: block; font-size: 17px; font-weight: 900; line-height: 1.5; color: var(--cw-ink); }
+.wk-pain p { margin: 10px 0 0; font-size: 14.5px; line-height: 1.9; color: var(--cw-ink2); }
+
+/* 仕組み（ステップ） */
+.wk-flow { margin-top: 52px; display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: 16px; counter-reset: f; }
+.wk-step {
+  position: relative; padding: 26px 22px 24px; border-radius: var(--cw-radius);
+  background: var(--cw-bg2); border: 1px solid var(--cw-line);
+}
+.wk-step::before {
+  counter-increment: f; content: "STEP " counter(f);
+  display: block; font-size: 12px; font-weight: 700; letter-spacing: .14em; color: var(--c);
+}
+.wk-step small { display: block; margin-top: 10px; font-size: 12px; color: var(--cw-dim); font-weight: 700; }
+.wk-step h3 { margin: 4px 0 0; font-size: 18px; font-weight: 900; line-height: 1.5; }
+.wk-step p { margin: 10px 0 0; font-size: 14px; line-height: 1.85; color: var(--cw-muted); }
+.wk-step:not(:last-child)::after {
+  content: ""; position: absolute; right: -12px; top: 50%; width: 8px; height: 8px; z-index: 2;
+  border-top: 2px solid var(--c); border-right: 2px solid var(--c); transform: translateY(-50%) rotate(45deg);
+}
+
+/* できること */
+.wk-alt { background: #0e1216; border-top: 1px solid var(--cw-line); border-bottom: 1px solid var(--cw-line); }
+.wk-feats { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.wk-feat { padding: 24px 22px; border-radius: var(--cw-radius); background: var(--cw-bg2); border: 1px solid var(--cw-line); }
+.wk-feat svg { width: 26px; height: 26px; color: var(--c); }
+.wk-feat h3 { margin: 12px 0 0; font-size: 17px; font-weight: 900; }
+.wk-feat p { margin: 8px 0 0; font-size: 14px; line-height: 1.85; color: var(--cw-muted); }
+.wk-shot--wide { margin-top: 48px; }
+
+/* ポイント（明るい面） */
+.wk-point { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.wk-point p { margin: 18px 0 0; font-size: 16px; line-height: 2; color: var(--cw-ink2); }
+.wk-roles { display: grid; gap: 14px; }
+.wk-role { padding: 22px 22px; border-radius: 16px; background: var(--cw-paper2); border: 1px solid var(--cw-rule); border-left: 4px solid var(--c); }
+.wk-role h3 { margin: 0; font-size: 16px; font-weight: 900; color: var(--cw-ink); }
+.wk-role ul { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.wk-role li { position: relative; padding-left: 20px; font-size: 14.5px; line-height: 1.75; color: var(--cw-ink2); }
+.wk-role li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 9px; height: 5px; border-left: 2px solid var(--cw-ink); border-bottom: 2px solid var(--cw-ink); transform: rotate(-45deg); }
+
+/* 相談 */
+.wk-cta { text-align: center; overflow: hidden; isolation: isolate;
+  background: radial-gradient(circle at 50% 70%, color-mix(in srgb, var(--c) 26%, transparent), transparent 60%), var(--cw-bg); }
+.wk-cta .cw-lead { margin-left: auto; margin-right: auto; }
+.wk-cta .cw-btn { margin-top: 34px; min-height: 60px; padding: 0 40px; font-size: 17px; }
+
+/* ほかの実績 */
+.wk-more { padding: 0 0 96px; background: var(--cw-bg); }
+.wk-more h2 { margin: 0 0 18px; font-size: 15px; color: var(--cw-muted); font-weight: 700; letter-spacing: .08em; }
+.wk-more__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.wk-more a {
+  --m: var(--cw-accent);
+  display: block; padding: 20px 20px; border-radius: 16px; text-decoration: none;
+  background: var(--cw-bg2); border: 1px solid var(--cw-line); border-top: 3px solid var(--m);
+  transition: transform .25s, border-color .25s;
+}
+.wk-more a:hover { transform: translateY(-4px); }
+.wk-more a small { display: block; font-size: 12px; color: var(--cw-dim); font-weight: 700; }
+.wk-more a b { display: block; margin-top: 4px; font-size: 16px; }
+
+@media (max-width: 960px) {
+  .wk-hero__in { grid-template-columns: 1fr; gap: 40px; }
+  .wk-flow { grid-template-columns: 1fr 1fr; }
+  .wk-step::after { display: none; }
+  .wk-feats { grid-template-columns: 1fr 1fr; }
+  .wk-point { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 640px) {
+  .wk-hero { padding: 40px 0 64px; }
+  .wk-pains, .wk-flow, .wk-feats, .wk-more__list { grid-template-columns: 1fr; }
+  .wk-cta .cw-btn { width: 100%; }
+}

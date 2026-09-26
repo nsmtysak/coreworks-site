@@ -258,6 +258,48 @@
 .contact__cta .cw-btn { min-height: 64px; padding: 0 44px; font-size: 18px; }
 .contact__note { margin-top: 16px; font-size: 13px; color: var(--cw-dim); letter-spacing: .06em; }
 @media (max-width: 600px) { .contact__cta .cw-btn { width: 100%; padding: 0 20px; } }
+
+/* ===== 製品カードを小さく＋導入実績（2026-09-26） ===== */
+.grp { margin: 56px 0 0; display: flex; align-items: center; gap: 14px; font-size: 18px; font-weight: 900; }
+.grp small { font-size: 13px; font-weight: 500; color: var(--cw-muted); }
+.grp::after { content: ""; flex: 1; height: 1px; background: var(--cw-line); }
+.grp + .cards { margin-top: 22px; }
+.cards { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.cards--works { grid-template-columns: repeat(3, 1fr); }
+.card { border-radius: 18px; }
+.card:hover { transform: translateY(-4px); }
+.card__media { aspect-ratio: 16 / 11; }
+.cards--works .card__media > img { object-position: left top; }
+.card__label { left: 14px; top: 14px; padding: 4px 10px; font-size: 11px; }
+.chip { padding: 8px 10px; border-radius: 11px; gap: 8px; font-size: 12px; }
+.chip i { width: 26px; height: 26px; border-radius: 7px; }
+.chip i svg { width: 15px; height: 15px; }
+.chip b { font-size: 12.5px; }
+.chip small { display: none; }
+.card .chip { left: 14px !important; bottom: 14px !important; }
+.card__body { padding: 20px 20px 22px; }
+.card__body h3 { font-size: 18px; }
+.card__who { display: block; margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--c); }
+.card__body p { margin-top: 8px; font-size: 13.5px; line-height: 1.8; }
+.card__gain { margin-top: 14px; padding: 9px 12px; font-size: 12.5px; line-height: 1.6; }
+.card__gain b { display: block; margin: 0 0 2px; font-size: 11px; }
+.card__more { padding-top: 14px; font-size: 14px; }
+.mock-web, .mock-lp { padding: 50px 16px 16px; }
+.mock-web li { padding: 7px 10px; font-size: 12px; gap: 8px; }
+.mock-web li:nth-child(3) { display: none; }
+.mock-web li em { display: none; }
+.mock-web ul { margin-top: 10px; gap: 6px; }
+.mock-lp { gap: 10px; }
+.card--juchu { --c: var(--c-juchu); }
+.card--mitsumori { --c: var(--c-mitsumori); }
+.card--unyo { --c: var(--c-unyo); }
+@media (max-width: 1080px) { .cards, .cards--works { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .cards, .cards--works { grid-template-columns: 1fr; gap: 14px; }
+  .card__media { aspect-ratio: 16 / 9; }
+  .grp { margin-top: 44px; font-size: 16px; flex-wrap: wrap; }
+  .grp::after { display: none; }
+}
 </style>
 </head>
 <body class="cw-dark">
@@ -271,7 +313,7 @@
       <a href="/schedule/">予定実績共有</a>
       <a href="/webchohyo/">Web帳票 自動DL</a>
       <a href="/lp-service/">LP制作</a>
-      <a href="/#cases">導入事例</a>
+      <a href="/#works">導入実績</a>
     </nav>
     <a class="cw-btn cw-btn--sm" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
     <details class="cw-menu">
@@ -282,6 +324,9 @@
         <a href="/schedule/">予定・実績の共有アプリ</a>
         <a href="/webchohyo/">Web帳票 自動ダウンロード</a>
         <a href="/lp-service/">LP制作サービス</a>
+        <a href="/juchu/">導入実績：受注実績照会</a>
+        <a href="/mitsumori/">導入実績：見積システム</a>
+        <a href="/unyo/">導入実績：運用システム</a>
         <a href="/#cases">導入事例</a>
         <a class="cw-btn" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
       </nav>
@@ -339,6 +384,7 @@
         <p class="cw-lead">どれも特別な機材や難しい操作は不要。現場の人が、その日から使えるものばかりです。</p>
       </div>
 
+      <h3 class="grp">すぐに使えるアプリ・サービス</h3>
       <div class="cards">
         <a class="card card--koji cw-reveal" href="/koji/">
           <div class="card__media">
@@ -407,6 +453,49 @@
             <h3>LP制作サービス</h3>
             <p>良い商品やサービスがあるのに、伝わっていない——その“伝える仕事”を、一枚のページが引き受けます。写真と想いをいただき、伝わる一枚に仕上げます。販促はLPにまかせて、あなたは本業に集中。</p>
             <div class="card__gain"><b>なくす無駄</b>販促に追われる時間・良い物が埋もれる機会損失</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="grp" id="works">お客様ごとに作った業務システム <small>導入実績</small></h3>
+      <div class="cards cards--works">
+        <a class="card card--juchu cw-reveal" href="/juchu/">
+          <div class="card__media">
+            <span class="card__label">導入実績</span>
+            <img src="/assets/img/works/juchu-screen.jpg" alt="受注実績照会の画面" width="1400" height="772" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3>受注実績照会</h3>
+            <span class="card__who">設備工事会社さま</span>
+            <p>受注した見積書を共有フォルダに入れるだけで、月ごとの売上・粗利・担当者ごとの数字を自動で集計します。</p>
+            <div class="card__gain"><b>なくした無駄</b>売上・利益の手集計</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card card--mitsumori cw-reveal" href="/mitsumori/">
+          <div class="card__media">
+            <span class="card__label">導入実績</span>
+            <img src="/assets/img/works/mitsumori-list.jpg" alt="見積システムの案件一覧画面" width="1400" height="612" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3>見積システム</h3>
+            <span class="card__who">設備工事会社さま</span>
+            <p>仕入先の見積PDFをドロップするだけ。AIが読み取り、粗利をのせた自社書式の御見積書を作成。PDFとメールの準備まで進みます。</p>
+            <div class="card__gain"><b>なくした無駄</b>仕入見積の打ち直し・単価計算</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card card--unyo cw-reveal" href="/unyo/">
+          <div class="card__media">
+            <span class="card__label">自社導入</span>
+            <img src="/assets/img/works/unyo-top.jpg" alt="運用システムの「今日やること」画面" width="1280" height="1000" loading="lazy">
+          </div>
+          <div class="card__body">
+            <h3>CoreWorks 運用システム</h3>
+            <span class="card__who">自社導入</span>
+            <p>見積・受注・納品・請求・発注を案件でつなぎ、請求漏れや未入金をトップ画面で自動検知します。</p>
+            <div class="card__gain"><b>なくした無駄</b>書類の散在・請求漏れの不安</div>
             <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </a>
@@ -506,6 +595,14 @@
         <li><a href="/schedule/"><span class="cw-footer__dot" style="background:var(--c-schedule)"></span>予定・実績の共有アプリ</a></li>
         <li><a href="/webchohyo/"><span class="cw-footer__dot" style="background:var(--c-webchohyo)"></span>Web帳票 自動ダウンロード</a></li>
         <li><a href="/lp-service/"><span class="cw-footer__dot" style="background:var(--c-lp)"></span>LP制作サービス</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>業務システム（導入実績）</h3>
+      <ul>
+        <li><a href="/juchu/"><span class="cw-footer__dot" style="background:var(--c-juchu)"></span>受注実績照会</a></li>
+        <li><a href="/mitsumori/"><span class="cw-footer__dot" style="background:var(--c-mitsumori)"></span>見積システム</a></li>
+        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>CoreWorks 運用システム</a></li>
       </ul>
     </div>
     <div>

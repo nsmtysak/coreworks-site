@@ -26,6 +26,9 @@
   --c-schedule: #3D8BFF;
   --c-webchohyo: #2FBF71;
   --c-lp: #FF6B5B;
+  --c-juchu: #22C3D6;
+  --c-mitsumori: #A78BFA;
+  --c-unyo: #F5C451;
 
   --cw-radius: 18px;
   --cw-max: 1160px;
@@ -175,7 +178,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--cw-header-h) + 8p
 .cw-footer a:hover { color: #fff; }
 .cw-footer__in {
   max-width: var(--cw-max); margin: 0 auto; padding: 64px 24px 40px;
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;
+  display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 36px;
 }
 .cw-footer__brand img { height: 40px; width: auto; }
 .cw-footer__brand p { margin: 18px 0 0; max-width: 24em; }
