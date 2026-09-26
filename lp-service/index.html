@@ -188,68 +188,6 @@
   .closing .mail:hover{color:#fff;}
 
 
-  /* ===== 画面見本（写真の代わり） ===== */
-  .stage{position:relative;z-index:2;aspect-ratio:4/3.3;}
-  .brw{position:absolute;left:0;top:0;width:88%;border-radius:14px;overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 80px -30px rgba(255,107,91,.55);}
-  .brw__bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#20252d;}
-  .brw__bar i{width:9px;height:9px;border-radius:50%;background:#3a414c;}
-  .brw__bar i:first-child{background:#ff6b5b;}
-  .brw__bar span{margin-left:10px;flex:1;background:#2c323b;border-radius:6px;padding:3px 10px;font-family:var(--latin);font-size:10px;color:#8b95a3;line-height:1.6;}
-  .brw__page{padding:12px;display:grid;gap:10px;background:#f7f2ea;}
-  .mk-hero{border-radius:10px;padding:22px 20px;color:#fff;line-height:1.5;background:radial-gradient(circle at 85% 20%,rgba(255,181,71,.55),transparent 45%),linear-gradient(135deg,#3a2217,#7a4127 60%,#a6552d);}
-  .mk-hero small{display:block;font-size:10px;letter-spacing:.14em;opacity:.8;}
-  .mk-hero b{display:block;margin-top:6px;font-size:clamp(16px,2vw,22px);font-weight:900;line-height:1.35;}
-  .mk-hero em{display:inline-block;margin-top:12px;font-style:normal;font-size:11px;font-weight:700;background:var(--amber);color:#2a1a10;padding:6px 14px;border-radius:999px;}
-  .mk-hero--sm{padding:14px 10px;}
-  .mk-hero--sm b{font-size:12px;}
-  .mk-hero--sm em{margin-top:8px;font-size:9px;padding:4px 10px;}
-  .mk-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
-  .mk-row i{height:46px;border-radius:8px;background:#e9dccb;}
-  .mk-row i:nth-child(2){background:#dcc6ad;}
-  .mk-lines{display:grid;gap:6px;}
-  .mk-lines i{display:block;height:7px;border-radius:4px;background:#d9d2c7;}
-  .phone{position:absolute;right:0;bottom:0;width:36%;aspect-ratio:9/18.5;border-radius:26px;background:#0d0f13;padding:7px;border:1px solid rgba(255,255,255,.2);box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 6px rgba(255,255,255,.04);}
-  .phone__scr{height:100%;border-radius:20px;background:#f7f2ea;padding:26px 8px 10px;display:flex;flex-direction:column;gap:8px;overflow:hidden;position:relative;}
-  .phone__scr::before{content:"";position:absolute;top:8px;left:50%;width:34%;height:8px;border-radius:6px;background:#0d0f13;transform:translateX(-50%);}
-  .mk-btn{margin-top:auto;min-height:26px;border-radius:999px;background:var(--coral);color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center;}
-
-  /* 夜のスマホ画面 */
-  .night{position:absolute;inset:0;padding:40px 22px 22px;display:flex;flex-direction:column;align-items:center;gap:10px;color:#fff;
-    background:radial-gradient(260px 200px at 80% 105%,rgba(255,181,71,.35),transparent 70%),linear-gradient(180deg,#141a2b,#0b0e16 70%);}
-  .night__time{font-family:var(--latin);font-weight:600;font-size:64px;line-height:1;letter-spacing:.02em;}
-  .night__date{font-size:13px;color:#aab3c2;margin-bottom:18px;}
-  .note{width:100%;display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.1);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);}
-  .note b{font-size:11px;color:#aab3c2;font-weight:700;}
-  .note span{font-size:14px;font-weight:500;line-height:1.5;}
-
-  /* 制作イメージ3種 */
-  .gal-card .ph{position:relative;line-height:1.5;}
-  .mk-a{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:16px;padding:22px;background:linear-gradient(160deg,#f8f1e6,#efe2cf);}
-  .mk-a__prod{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#b8773f,#5a3019 60%,#2b160b);box-shadow:0 18px 30px -12px rgba(90,48,25,.7),inset 0 0 0 8px rgba(255,255,255,.15);}
-  .mk-a__txt{color:#2b1a10;}
-  .mk-a__txt small{display:block;font-size:10px;letter-spacing:.12em;color:#8b5a3a;font-weight:700;}
-  .mk-a__txt b{display:block;margin-top:4px;font-size:17px;font-weight:900;line-height:1.35;}
-  .mk-a__txt span{display:block;margin-top:6px;font-family:var(--latin);font-weight:700;font-size:16px;}
-  .mk-a__txt em{display:inline-block;margin-top:8px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:#2b1a10;padding:6px 12px;border-radius:999px;}
-  .mk-b{display:flex;justify-content:center;align-items:stretch;gap:26px;padding:24px 28px;background:radial-gradient(circle at 20% 20%,rgba(214,178,110,.22),transparent 55%),#14120e;}
-  .mk-b__v{writing-mode:vertical-rl;font-size:24px;font-weight:900;letter-spacing:.2em;color:#efe6d4;line-height:1.7;}
-  .mk-b__side{display:flex;flex-direction:column;justify-content:center;gap:8px;width:42%;}
-  .mk-b__side small{font-size:10px;letter-spacing:.3em;color:#d6b26e;}
-  .mk-b__side i{display:block;height:1px;background:rgba(214,178,110,.5);}
-  .mk-b__side i:nth-of-type(2){width:70%;}
-  .mk-b__side em{align-self:flex-start;margin-top:6px;font-style:normal;font-size:10px;letter-spacing:.14em;color:#efe6d4;border:1px solid #d6b26e;padding:6px 12px;}
-  .mk-c{display:grid;place-items:center;background:radial-gradient(circle at 50% 110%,rgba(255,255,255,.35),transparent 60%),linear-gradient(135deg,#ff8a6b,var(--coral) 55%,var(--coral-d));}
-  .mk-c{align-items:end;padding-top:24px;}
-  .phone--c{position:relative;right:auto;bottom:auto;width:42%;margin-bottom:-56px;}
-  .mk-c__hd{height:8px;width:40%;border-radius:4px;background:#d9d2c7;flex:none;}
-  .mk-c__hero{border-radius:8px;padding:12px 8px;background:linear-gradient(160deg,#d9efe9,#b6dcd2);color:#123b33;}
-  .mk-c__hero small{display:block;font-size:8px;font-weight:700;letter-spacing:.08em;}
-  .mk-c__hero b{display:block;margin-top:4px;font-size:11px;font-weight:900;line-height:1.4;}
-  .phone--c .mk-btn{min-height:22px;font-size:9px;}
-  @media(max-width:860px){
-    .stage{aspect-ratio:16/11;max-width:520px;}
-    .before-photo{height:340px;}
-  }
   @media(max-width:860px){
     .hero{padding:28px 0 64px;}
     .hero .kicker{margin-bottom:18px;}
@@ -274,25 +212,8 @@
     .hd a.cta{padding:8px 16px;font-size:13px;}
     .hero .actions .btn-primary,.closing .actions .btn-primary{width:100%;}
   }
-  @media(max-width:860px){
-    .stage{aspect-ratio:auto;padding-bottom:28px;}
-    .brw{position:relative;width:84%;}
-    .phone{width:31%;}
-    .mk-hero{padding:16px 14px;}
-    .mk-row i{height:34px;}
-    .before-photo{height:auto;}
-    .night{position:relative;inset:auto;padding:32px 18px 20px;}
-    .night__time{font-size:54px;}
-  }
   @media(max-width:480px){
-    .brw__page .mk-lines{display:none;}
-    .mk-row i{height:26px;}
-    .stage{padding-bottom:16px;}
     .hero{padding-top:18px;}
-    .mk-hero--sm{padding:10px 7px;}
-    .mk-hero--sm small{font-size:6px;letter-spacing:.04em;}
-    .mk-hero--sm b{font-size:8.5px;margin-top:3px;}
-    .mk-hero--sm em{font-size:7px;padding:3px 7px;margin-top:6px;}
   }
 </style>
 </head>
@@ -321,23 +242,7 @@
         <div class="hero-chips"><span>業種不問</span><span>写真はスマホでOK</span><span>公開後も更新サポート</span></div>
       </div>
       <div class="hero-photo">
-        <div class="stage" role="img" aria-label="パソコンとスマホに表示された、制作したランディングページの見本">
-          <div class="brw">
-            <div class="brw__bar"><i></i><i></i><i></i><span>your-shop.jp</span></div>
-            <div class="brw__page">
-              <div class="mk-hero"><small>自家焙煎珈琲の店</small><b>毎朝の一杯を、<br>もっと特別に。</b><em>ご注文はこちら</em></div>
-              <div class="mk-row"><i></i><i></i><i></i></div>
-              <div class="mk-lines"><i></i><i style="width:72%"></i></div>
-            </div>
-          </div>
-          <div class="phone">
-            <div class="phone__scr">
-              <div class="mk-hero mk-hero--sm"><small>自家焙煎珈琲の店</small><b>毎朝の一杯を、<br>もっと特別に。</b><em>ご注文</em></div>
-              <div class="mk-lines"><i></i><i style="width:64%"></i><i style="width:82%"></i></div>
-              <div class="mk-btn"></div>
-            </div>
-          </div>
-        </div>
+        <div class="frame"><img src="https://images.unsplash.com/photo-1538128844159-f08f41bfb169?w=1100&q=80&fit=crop" alt="厨房で料理に打ち込む料理人" loading="eager"></div>
         <span class="ribbon">伝わる一枚を、お作りします</span>
       </div>
     </div>
@@ -360,13 +265,8 @@
     <div class="sec-no">01 ｜ あの夜の話</div>
     <div class="before-grid">
       <div class="before-photo">
-        <div class="night" role="img" aria-label="夜21時47分のスマホ画面。やり残した発信の通知が並ぶ">
-          <div class="night__time">21:47</div>
-          <div class="night__date">木曜日</div>
-          <div class="note"><b>SNS</b><span>今日の投稿、まだです</span></div>
-          <div class="note"><b>メール</b><span>「商品について質問です」ほか2件 未返信</span></div>
-          <div class="note"><b>メモ</b><span>チラシの文章を考える</span></div>
-        </div>
+        <img src="https://images.unsplash.com/photo-1617315074558-484bf82841a8?w=1000&q=80&fit=crop" alt="夜、机でノートパソコンに向かう">
+        <span class="stamp">21:47</span>
       </div>
       <div class="before-body">
         <h2 class="sec">夜、やっと座ったのに。</h2>
@@ -414,15 +314,15 @@
     <h2 class="sec">あなたの“良さ”を、<br>伝わる一枚に。</h2>
     <div class="gal-grid">
       <div class="gal-card">
-        <div class="ph mk-a" role="img" aria-label="商品の魅力を伝えるページの見本"><div class="mk-a__prod"></div><div class="mk-a__txt"><small>深煎りブレンド</small><b>香りで選ぶ、<br>朝の一杯。</b><span>¥1,480</span><em>カートに入れる</em></div></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=900&q=80&fit=crop" alt="色あざやかな和菓子" loading="lazy"></div>
         <div class="cap">商品の魅力が、伝わる<span>こだわり・写真・お客様の声まで、一枚に。</span></div>
       </div>
       <div class="gal-card">
-        <div class="ph mk-b" role="img" aria-label="世界観で魅せるページの見本"><div class="mk-b__v">静けさを、<br>泊まる。</div><div class="mk-b__side"><small>古民家の宿</small><i></i><i></i><i></i><em>空室をみる</em></div></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1632790929202-a79cd10d9076?w=900&q=80&fit=crop" alt="あかりの灯る和室" loading="lazy"></div>
         <div class="cap">世界観で、魅せる<span>色・写真・あしらいで“らしさ”を立てる。</span></div>
       </div>
       <div class="gal-card">
-        <div class="ph mk-c" role="img" aria-label="スマホで表示したページの見本"><div class="phone phone--c"><div class="phone__scr"><div class="mk-c__hd"></div><div class="mk-c__hero"><small>駅前の整体院</small><b>肩の重さ、<br>今日で終わりに。</b></div><div class="mk-lines"><i></i><i style="width:70%"></i></div><div class="mk-btn">WEB予約</div></div></div></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?w=900&q=80&fit=crop" alt="スマホに表示されたウェブページ" loading="lazy"></div>
         <div class="cap">スマホでも、美しい<span>どの画面でも、価値がまっすぐ届く。</span></div>
       </div>
     </div>
