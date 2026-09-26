@@ -7,7 +7,7 @@
 <meta name="description" content="取引先サイトに届くたびログインして請求書・納品書を集める作業を、パソコンが自動で代行。納品書は毎日、請求書は締め日ごと。何もしなくても、必要な帳票がフォルダに揃っていきます。会社での導入のご相談を受付中。" />
 <link rel="canonical" href="https://cw-app.jp/webchohyo/" />
 <meta property="og:url" content="https://cw-app.jp/webchohyo/" />
-<meta name="theme-color" content="#0a0c0f" />
+<meta name="theme-color" content="#ffffff" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="取引先サイトの請求書集め、もう開かない。" />
 <meta property="og:description" content="取引先サイトに届くたびログインして帳票を集める作業を、パソコンが自動で代行。何もしなくても、必要な帳票がフォルダに揃っていきます。" />
@@ -348,6 +348,45 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .foot{background:#0a0c0f;padding:28px 0 36px;border-top:1px solid rgba(255,255,255,.1);}
 .hero{padding:72px 0 88px;}
 @media(max-width:860px){.hero{padding:48px 0 72px;}}
+
+/* ===== 白基調（2026-09-26 黒基調から変更） ===== */
+.hero{color:var(--text);}
+.hero h1{text-shadow:none;}
+.hero__lead{color:var(--text-sub);}
+.hero__chips span{background:#fff;border-color:var(--border);color:var(--text);}
+.hero__cap{color:var(--text-faint);}
+.scroll-ind{color:var(--text-faint);}
+.scroll-ind .mouse{border-color:rgba(27,34,44,.3);}
+.scroll-ind .mouse::after{background:var(--text);}
+.btn--glass{background:#fff;color:var(--text);border-color:rgba(27,34,44,.2);backdrop-filter:none;}
+.btn--glass:hover{background:#fff;border-color:var(--text);}
+.sec--dark{background:#f6f5f2;color:var(--text);}
+.sec--dark .lead{color:var(--text-sub);}
+.statband{background:#fff;color:var(--text);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.statband .num small,.statband .num .pre{-webkit-text-fill-color:var(--text);color:var(--text);}
+.statband .lab{color:var(--text-sub);}
+.statband__grid > div:not(:last-child)::after{background:var(--border);}
+.band{color:var(--text);}
+.band__sub{color:var(--text-sub);}
+.cta{color:var(--text);}
+.cta h2{text-shadow:none;}
+.cta p{color:var(--text-sub);}
+.cta .cta__note{color:var(--text-faint);}
+.foot{background:#f6f5f2;color:var(--text-faint);border-top:1px solid var(--border);}
+.hero{background:linear-gradient(160deg,#ffffff 0%,#f6f5f2 100%);}
+.hero__dots{background-image:radial-gradient(rgba(27,34,44,.07) 1.2px,transparent 1.2px);}
+.hero__glow{opacity:.45;}
+.sec--dark .secdots,.band__dots,.cta__dots{display:none;}
+.sec--dark .tag{color:var(--orange);}
+.sec--dark .h2 .bl{color:var(--orange);}
+.step{background:#fff;border-color:var(--border);box-shadow:var(--shadow-sm);}
+.step h3{color:var(--text);}
+.step p{color:var(--text-sub);}
+.split__media{background:linear-gradient(165deg,#f6f5f2,#ece8e1);}
+.band{background:linear-gradient(150deg,#f6f5f2 0%,#efebe4 100%);}
+.band__glow,.cta__glow{opacity:.35;}
+.ba__after{background:linear-gradient(155deg,var(--orange),#c9530f);}
+.cta{background:linear-gradient(150deg,#ffffff 0%,#f6f5f2 100%);}
 </style>
 </head>
 <body>
@@ -356,7 +395,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 <!--#header-->
 <header class="cw-header">
   <div class="cw-header__in">
-    <a class="cw-logo" href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="124" height="36"></a>
+    <a class="cw-logo" href="/"><img src="/assets/logo-sm.png" alt="CoreWorks" width="124" height="36"></a>
     <nav class="cw-nav" aria-label="メインメニュー">
       <a href="/koji/">工事写真台帳</a>
       <a href="/schedule/">予定実績共有</a>
@@ -706,7 +745,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 <footer class="cw-footer">
   <div class="cw-footer__in">
     <div class="cw-footer__brand">
-      <a href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="138" height="40" loading="lazy"></a>
+      <a href="/"><img src="/assets/logo-sm.png" alt="CoreWorks" width="138" height="40" loading="lazy"></a>
       <p>毎日くり返される“本質的でない作業”を、課題にちょうど合った仕組みで消していきます。空いた時間を、あなたの本業へ。</p>
     </div>
     <div>

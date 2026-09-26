@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>工事写真台帳｜工事写真帳は、現場のスマホで5分で終わる。</title>
 <meta name="description" content="撮って、選んで、送るだけ。表紙付きの工事写真帳PDFが現場のiPhoneでその場で完成し、そのままメール送付。事務所に戻っての貼り付け作業は、もう要りません。会社での導入のご相談を受付中。" />
-<meta name="theme-color" content="#0d1626" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="canonical" href="https://cw-app.jp/koji/" />
 <meta property="og:url" content="https://cw-app.jp/koji/" />
 <meta property="og:type" content="website" />
@@ -313,6 +313,43 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .foot{background:#0a0c0f;padding:28px 0 36px;border-top:1px solid rgba(255,255,255,.1);}
 .hero{padding:72px 0 70px;min-height:calc(100svh - 64px);}
 @media(max-width:860px){.hero{padding:48px 0 64px;min-height:auto;}}
+
+/* 白地の上のオレンジ文字は濃いめに */
+.am,.eyebrow,.hero h1 .am,.h2 .am,.band q .am,.cta h2 .am{color:#D4570F;}
+/* ===== 白基調（2026-09-26 黒基調から変更） ===== */
+.hero{color:var(--text);}
+.hero h1{text-shadow:none;}
+.hero__lead{color:var(--text-sub);}
+.hero__chips span{background:#fff;border-color:var(--border);color:var(--text);}
+.hero__cap{color:var(--text-faint);}
+.scroll-ind{color:var(--text-faint);}
+.scroll-ind .mouse{border-color:rgba(27,34,44,.3);}
+.scroll-ind .mouse::after{background:var(--text);}
+.btn--glass{background:#fff;color:var(--text);border-color:rgba(27,34,44,.2);backdrop-filter:none;}
+.btn--glass:hover{background:#fff;border-color:var(--text);}
+.sec--dark{background:#f6f5f2;color:var(--text);}
+.sec--dark .lead{color:var(--text-sub);}
+.statband{background:#fff;color:var(--text);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.statband .num small,.statband .num .pre{-webkit-text-fill-color:var(--text);color:var(--text);}
+.statband .lab{color:var(--text-sub);}
+.statband__grid > div:not(:last-child)::after{background:var(--border);}
+.band{color:var(--text);}
+.band__sub{color:var(--text-sub);}
+.cta{color:var(--text);}
+.cta h2{text-shadow:none;}
+.cta p{color:var(--text-sub);}
+.cta .cta__note{color:var(--text-faint);}
+.foot{background:#f6f5f2;color:var(--text-faint);border-top:1px solid var(--border);}
+.sec--dark .tag{color:var(--blue);}
+.hero__scrim{background:linear-gradient(95deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 38%,rgba(255,255,255,.45) 70%,rgba(255,255,255,.12) 100%);}
+@media(max-width:860px){.hero__scrim{background:linear-gradient(0deg,rgba(255,255,255,.98) 8%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.72) 100%);}}
+.band__scrim{background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.84));}
+.cta__scrim{background:linear-gradient(120deg,rgba(255,255,255,.95),rgba(246,245,242,.88));}
+.cta__contact{color:var(--text-sub);}
+.cta__contact a{color:var(--blue);border-bottom-color:rgba(232,99,26,.4);}
+.spot__badge{background:rgba(255,255,255,.94);color:var(--text);}
+.float--top{background:#fff;color:var(--text);}
+.float--top .ic{color:var(--blue);}
 </style>
 </head>
 <body>
@@ -321,7 +358,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 <!--#header-->
 <header class="cw-header">
   <div class="cw-header__in">
-    <a class="cw-logo" href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="124" height="36"></a>
+    <a class="cw-logo" href="/"><img src="/assets/logo-sm.png" alt="CoreWorks" width="124" height="36"></a>
     <nav class="cw-nav" aria-label="メインメニュー">
       <a href="/koji/" aria-current="page">工事写真台帳</a>
       <a href="/schedule/">予定実績共有</a>
@@ -634,7 +671,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 <footer class="cw-footer">
   <div class="cw-footer__in">
     <div class="cw-footer__brand">
-      <a href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="138" height="40" loading="lazy"></a>
+      <a href="/"><img src="/assets/logo-sm.png" alt="CoreWorks" width="138" height="40" loading="lazy"></a>
       <p>毎日くり返される“本質的でない作業”を、課題にちょうど合った仕組みで消していきます。空いた時間を、あなたの本業へ。</p>
     </div>
     <div>
