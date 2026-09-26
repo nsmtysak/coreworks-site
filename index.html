@@ -309,24 +309,24 @@
   <div class="cw-header__in">
     <a class="cw-logo" href="/" aria-current="page"><img src="/assets/logo-sm.png" alt="CoreWorks" width="124" height="36"></a>
     <nav class="cw-nav" aria-label="メインメニュー">
+      <a href="/#works">業務システム</a>
       <a href="/koji/">工事写真台帳</a>
       <a href="/schedule/">予定実績共有</a>
-      <a href="/webchohyo/">Web帳票 自動DL</a>
       <a href="/lp-service/">LP制作</a>
-      <a href="/#works">制作実績</a>
+      <a href="/#cases">導入事例</a>
     </nav>
     <a class="cw-btn cw-btn--sm" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
     <details class="cw-menu">
       <summary aria-label="メニューを開く"><span></span></summary>
       <nav class="cw-menu__panel" aria-label="メニュー">
         <a href="/" aria-current="page">トップ</a>
+        <a href="/juchu/">受注実績照会</a>
+        <a href="/mitsumori/">見積システム</a>
+        <a href="/unyo/">運用システム</a>
+        <a href="/webchohyo/">Web帳票 自動ダウンロード</a>
         <a href="/koji/">工事写真台帳アプリ</a>
         <a href="/schedule/">予定・実績の共有アプリ</a>
-        <a href="/webchohyo/">Web帳票 自動ダウンロード</a>
         <a href="/lp-service/">LP制作サービス</a>
-        <a href="/juchu/">制作実績：受注実績照会</a>
-        <a href="/mitsumori/">制作実績：見積システム</a>
-        <a href="/unyo/">制作実績：運用システム</a>
         <a href="/#cases">導入事例</a>
         <a class="cw-btn" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
       </nav>
@@ -384,82 +384,8 @@
         <p class="cw-lead">どれも特別な機材や難しい操作は不要。現場の人が、その日から使えるものばかりです。</p>
       </div>
 
-      <h3 class="grp">すぐに使えるアプリ・サービス</h3>
-      <div class="cards">
-        <a class="card card--koji cw-reveal" href="/koji/">
-          <div class="card__media">
-            <span class="card__label">工事写真台帳</span>
-            <img src="/assets/img/card-koji.jpg" alt="鉄骨が組み上がった工事現場" width="960" height="720" loading="lazy">
-            <div class="chip" style="left:20px;bottom:20px">
-              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></svg></i>
-              <div><b>写真帳PDFを作成</b><small>○○ビル空調更新工事</small></div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h3>工事写真台帳アプリ</h3>
-            <p>スマホの工事写真を選んで並べるだけで、表紙つきの写真帳PDFが完成。そのままメールで送付できます。事務所に戻って写真をExcelに貼り付け、PDFにする作業がまるごと不要に。</p>
-            <div class="card__gain"><b>なくした無駄</b>写真帳の手作業づくり・送付</div>
-            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="card card--schedule cw-reveal" href="/schedule/">
-          <div class="card__media">
-            <span class="card__label">予定実績共有</span>
-            <img src="https://images.unsplash.com/photo-1676276374782-39159bc5e7b4?rect=800,1350,3017,2074&amp;w=960&amp;h=660&amp;fit=crop&amp;q=80" alt="曜日ごとに付箋で予定を貼ったホワイトボード" width="960" height="660" loading="lazy">
-            <div class="chip" style="left:20px;bottom:20px">
-              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>
-              <div><b>実績 自動集計</b><small>今週の予定 → カレンダーへ</small></div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h3>予定・実績の共有アプリ</h3>
-            <p>掲示板での予定共有とExcelでの実績入力を、スマホひとつに統合。予定はカレンダーへ、実績は自動集計へ。「誰が未入力か」も一目で分かります。</p>
-            <div class="card__gain"><b>なくす無駄</b>掲示板転記・Excel入力</div>
-            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="card card--web cw-reveal" href="/webchohyo/">
-          <div class="card__media">
-            <span class="card__label">Web帳票 自動DL</span>
-            <div class="mock-web" aria-hidden="true">
-              <div class="mock-web__title">帳票を自動でダウンロード中…</div>
-              <ul>
-                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>請求書 — ○○商事<em>保存済み</em></li>
-                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>納品書 — △△産業<em>保存済み</em></li>
-                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>請求書 — □□工業<em>保存済み</em></li>
-                <li class="run">巡回中 — ほか27サイト<span class="bar"></span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card__body">
-            <h3>Web帳票 自動ダウンロード</h3>
-            <p>取引先ごとのサイトに毎回ログインして請求書・納品書を集める作業を、パソコンが自動で代行。30以上のサイトから自動保存し、なにもしなくても必要なファイルがフォルダのなかに。</p>
-            <div class="card__gain"><b>なくした無駄</b>帳票の手作業ダウンロード</div>
-            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="card card--lp cw-reveal" href="/lp-service/">
-          <div class="card__media">
-            <span class="card__label">LP制作サービス</span>
-            <div class="mock-lp" aria-hidden="true">
-              <div class="mock-lp__page mock-lp__page--b"><small>BEFORE</small><i></i><i style="width:80%"></i><i></i><i style="width:60%"></i><i style="width:85%"></i><i style="width:50%"></i></div>
-              <div class="mock-lp__page mock-lp__page--a"><small>AFTER</small><div class="mock-lp__hero"></div><div class="mock-lp__row"><i></i><i></i><i></i></div><div class="mock-lp__btn"></div></div>
-            </div>
-          </div>
-          <div class="card__body">
-            <h3>LP制作サービス</h3>
-            <p>良い商品やサービスがあるのに、伝わっていない——その“伝える仕事”を、一枚のページが引き受けます。写真と想いをいただき、伝わる一枚に仕上げます。販促はLPにまかせて、あなたは本業に集中。</p>
-            <div class="card__gain"><b>なくす無駄</b>販促に追われる時間・良い物が埋もれる機会損失</div>
-            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-      </div>
-
       <h3 class="grp" id="works">業務システム <small>制作実績</small></h3>
-      <div class="cards cards--works">
+      <div class="cards">
         <a class="card card--juchu cw-reveal" href="/juchu/">
           <div class="card__media">
             <span class="card__label">導入実績</span>
@@ -496,6 +422,78 @@
             <span class="card__who">見積から請求までの業務システム</span>
             <p>見積・受注・納品・請求・発注を案件でつなぎ、請求漏れや未入金をトップ画面で自動検知します。</p>
             <div class="card__gain"><b>なくした無駄</b>書類の散在・請求漏れの不安</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card card--web cw-reveal" href="/webchohyo/">
+          <div class="card__media">
+            <span class="card__label">導入実績</span>
+            <div class="mock-web" aria-hidden="true">
+              <div class="mock-web__title">帳票を自動でダウンロード中…</div>
+              <ul>
+                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>請求書 — ○○商事<em>保存済み</em></li>
+                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>納品書 — △△産業<em>保存済み</em></li>
+                <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>請求書 — □□工業<em>保存済み</em></li>
+                <li class="run">巡回中 — ほか27サイト<span class="bar"></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>Web帳票 自動ダウンロード</h3>
+            <span class="card__who">商社・事務部門さま</span>
+            <p>取引先ごとのサイトに毎回ログインして請求書・納品書を集める作業を、パソコンが自動で代行。30以上のサイトから自動保存し、なにもしなくても必要なファイルがフォルダのなかに。</p>
+            <div class="card__gain"><b>なくした無駄</b>帳票の手作業ダウンロード</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <h3 class="grp" id="apps">アプリ・サービス</h3>
+      <div class="cards cards--works">
+        <a class="card card--koji cw-reveal" href="/koji/">
+          <div class="card__media">
+            <span class="card__label">工事写真台帳</span>
+            <img src="/assets/img/card-koji.jpg" alt="鉄骨が組み上がった工事現場" width="960" height="720" loading="lazy">
+            <div class="chip" style="left:20px;bottom:20px">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></svg></i>
+              <div><b>写真帳PDFを作成</b><small>○○ビル空調更新工事</small></div>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>工事写真台帳アプリ</h3>
+            <p>スマホの工事写真を選んで並べるだけで、表紙つきの写真帳PDFが完成。そのままメールで送付できます。事務所に戻って写真をExcelに貼り付け、PDFにする作業がまるごと不要に。</p>
+            <div class="card__gain"><b>なくした無駄</b>写真帳の手作業づくり・送付</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card card--schedule cw-reveal" href="/schedule/">
+          <div class="card__media">
+            <span class="card__label">予定実績共有</span>
+            <img src="https://images.unsplash.com/photo-1676276374782-39159bc5e7b4?rect=800,1350,3017,2074&amp;w=960&amp;h=660&amp;fit=crop&amp;q=80" alt="曜日ごとに付箋で予定を貼ったホワイトボード" width="960" height="660" loading="lazy">
+            <div class="chip" style="left:20px;bottom:20px">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>
+              <div><b>実績 自動集計</b><small>今週の予定 → カレンダーへ</small></div>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>予定・実績の共有アプリ</h3>
+            <p>掲示板での予定共有とExcelでの実績入力を、スマホひとつに統合。予定はカレンダーへ、実績は自動集計へ。「誰が未入力か」も一目で分かります。</p>
+            <div class="card__gain"><b>なくす無駄</b>掲示板転記・Excel入力</div>
+            <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card card--lp cw-reveal" href="/lp-service/">
+          <div class="card__media">
+            <span class="card__label">LP制作サービス</span>
+            <div class="mock-lp" aria-hidden="true">
+              <div class="mock-lp__page mock-lp__page--b"><small>BEFORE</small><i></i><i style="width:80%"></i><i></i><i style="width:60%"></i><i style="width:85%"></i><i style="width:50%"></i></div>
+              <div class="mock-lp__page mock-lp__page--a"><small>AFTER</small><div class="mock-lp__hero"></div><div class="mock-lp__row"><i></i><i></i><i></i></div><div class="mock-lp__btn"></div></div>
+            </div>
+          </div>
+          <div class="card__body">
+            <h3>LP制作サービス</h3>
+            <p>良い商品やサービスがあるのに、伝わっていない——その“伝える仕事”を、一枚のページが引き受けます。写真と想いをいただき、伝わる一枚に仕上げます。販促はLPにまかせて、あなたは本業に集中。</p>
+            <div class="card__gain"><b>なくす無駄</b>販促に追われる時間・良い物が埋もれる機会損失</div>
             <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
         </a>
@@ -589,20 +587,20 @@
       <p>毎日くり返される“本質的でない作業”を、課題にちょうど合った仕組みで消していきます。空いた時間を、あなたの本業へ。</p>
     </div>
     <div>
-      <h3>アプリ・サービス</h3>
+      <h3>業務システム</h3>
       <ul>
-        <li><a href="/koji/"><span class="cw-footer__dot" style="background:var(--c-koji)"></span>工事写真台帳アプリ</a></li>
-        <li><a href="/schedule/"><span class="cw-footer__dot" style="background:var(--c-schedule)"></span>予定・実績の共有アプリ</a></li>
-        <li><a href="/webchohyo/"><span class="cw-footer__dot" style="background:var(--c-webchohyo)"></span>Web帳票 自動ダウンロード</a></li>
-        <li><a href="/lp-service/"><span class="cw-footer__dot" style="background:var(--c-lp)"></span>LP制作サービス</a></li>
+        <li><a href="/juchu/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>受注実績照会</a></li>
+        <li><a href="/mitsumori/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>見積システム</a></li>
+        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>運用システム</a></li>
+        <li><a href="/webchohyo/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>Web帳票 自動ダウンロード</a></li>
       </ul>
     </div>
     <div>
-      <h3>業務システム（制作実績）</h3>
+      <h3>アプリ・サービス</h3>
       <ul>
-        <li><a href="/juchu/"><span class="cw-footer__dot" style="background:var(--c-juchu)"></span>受注実績照会</a></li>
-        <li><a href="/mitsumori/"><span class="cw-footer__dot" style="background:var(--c-mitsumori)"></span>見積システム</a></li>
-        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>運用システム</a></li>
+        <li><a href="/koji/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>工事写真台帳アプリ</a></li>
+        <li><a href="/schedule/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>予定・実績の共有アプリ</a></li>
+        <li><a href="/lp-service/"><span class="cw-footer__dot" style="background:var(--cw-accent)"></span>LP制作サービス</a></li>
       </ul>
     </div>
     <div>
