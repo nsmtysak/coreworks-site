@@ -10,6 +10,7 @@
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#1B3A5B">
 <link rel="canonical" href="https://cw-app.jp/cases/webchohyo-jido-dl.html">
+<link rel="stylesheet" href="/assets/css/site.css">
 <style>
   :root{
     --navy:#1B3A5B; --navy-deep:#13283f; --orange:#E2641B; --orange-soft:#fbeede;
@@ -79,12 +80,33 @@
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap">
-    <a href="../index.html"><img src="../assets/logo.png" alt="CoreWorks"></a>
-    <a class="cta" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
+<!--#header-->
+<header class="cw-header">
+  <div class="cw-header__in">
+    <a class="cw-logo" href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="124" height="36"></a>
+    <nav class="cw-nav" aria-label="メインメニュー">
+      <a href="/koji/">工事写真台帳</a>
+      <a href="https://nsmtysak.github.io/schedule-lp/">予定実績共有</a>
+      <a href="https://nsmtysak.github.io/webchohyo-lp/">Web帳票 自動DL</a>
+      <a href="https://nsmtysak.github.io/lp-service/">LP制作</a>
+      <a href="/#cases">導入事例</a>
+    </nav>
+    <a class="cw-btn cw-btn--sm" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
+    <details class="cw-menu">
+      <summary aria-label="メニューを開く"><span></span></summary>
+      <nav class="cw-menu__panel" aria-label="メニュー">
+        <a href="/">トップ</a>
+        <a href="/koji/">工事写真台帳アプリ</a>
+        <a href="https://nsmtysak.github.io/schedule-lp/">予定・実績の共有アプリ</a>
+        <a href="https://nsmtysak.github.io/webchohyo-lp/">Web帳票 自動ダウンロード</a>
+        <a href="https://nsmtysak.github.io/lp-service/">LP制作サービス</a>
+        <a href="/#cases">導入事例</a>
+        <a class="cw-btn" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">無料で相談する</a>
+      </nav>
+    </details>
   </div>
 </header>
+<!--/header-->
 
 <div class="wrap">
   <div class="crumb"><a href="../index.html">CoreWorks</a> ／ 事例</div>
@@ -140,9 +162,38 @@
   </article>
 </div>
 
-<footer class="site">
-  <div class="wrap">Applications for Core Focus ／ © 2026 CoreWorks</div>
+<!--#footer-->
+<footer class="cw-footer">
+  <div class="cw-footer__in">
+    <div class="cw-footer__brand">
+      <a href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="138" height="40" loading="lazy"></a>
+      <p>毎日くり返される“本質的でない作業”を、課題にちょうど合った仕組みで消していきます。空いた時間を、あなたの本業へ。</p>
+    </div>
+    <div>
+      <h3>アプリ・サービス</h3>
+      <ul>
+        <li><a href="/koji/"><span class="cw-footer__dot" style="background:var(--c-koji)"></span>工事写真台帳アプリ</a></li>
+        <li><a href="https://nsmtysak.github.io/schedule-lp/"><span class="cw-footer__dot" style="background:var(--c-schedule)"></span>予定・実績の共有アプリ</a></li>
+        <li><a href="https://nsmtysak.github.io/webchohyo-lp/"><span class="cw-footer__dot" style="background:var(--c-webchohyo)"></span>Web帳票 自動ダウンロード</a></li>
+        <li><a href="https://nsmtysak.github.io/lp-service/"><span class="cw-footer__dot" style="background:var(--c-lp)"></span>LP制作サービス</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>CoreWorks</h3>
+      <ul>
+        <li><a href="/">トップ</a></li>
+        <li><a href="/cases/koji-shashin-daicho.html">事例：工事写真のExcel貼り付け</a></li>
+        <li><a href="/cases/webchohyo-jido-dl.html" aria-current="page">事例：帳票の手作業ダウンロード</a></li>
+        <li><a href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">info@cw-app.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cw-footer__bottom">
+    <span>Applications for Core Focus</span>
+    <span>© 2026 CoreWorks</span>
+  </div>
 </footer>
+<!--/footer-->
 
 </body>
 </html>
