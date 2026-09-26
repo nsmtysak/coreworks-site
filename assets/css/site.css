@@ -11,7 +11,7 @@
   --cw-line: rgba(27, 34, 44, .10);
   --cw-text: #1b222c;
   --cw-muted: #5a6472;
-  --cw-dim: #8a929e;
+  --cw-dim: #6b7482;
 
   --cw-paper: #f5f3ee;
   --cw-paper2: #ffffff;
@@ -81,7 +81,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--cw-header-h) + 8p
 .cw-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 52px; padding: 0 28px; border-radius: 999px;
-  background: linear-gradient(135deg, var(--cw-accent2), var(--cw-accent));
+  background: linear-gradient(135deg, var(--cw-accent), #C9530F);
   color: #fff !important; font-weight: 700; font-size: 16px; text-decoration: none;
   box-shadow: 0 10px 30px -10px rgba(232, 99, 26, .7);
   transition: transform .2s, box-shadow .2s;

@@ -23,14 +23,14 @@
   --navy-2:#181d24;
   --navy-deep:#0a0c0f;
   --orange:#E8631A;
-  --orange-2:#FF8A3D;
+  --orange-2:#C9530F;
   --orange-soft:#fbeee4;
   --ink:#1b222c;
   --bg:#f5f3ee;
   --surface:#ffffff;
   --text:#1b222c;
   --text-sub:#4a5563;
-  --text-faint:#8a8f98;
+  --text-faint:#6b7280;
   --border:#e3ded4;
   --green:#E8631A;
   --red:#8a8f98;
@@ -387,6 +387,13 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .band__glow,.cta__glow{opacity:.35;}
 .ba__after{background:linear-gradient(155deg,var(--orange),#c9530f);}
 .cta{background:linear-gradient(150deg,#ffffff 0%,#f6f5f2 100%);}
+
+/* ===== 読みやすさ修正（2026-09-26） ===== */
+.ba__after,.ba__after *{color:#fff !important;}
+.ba__after .ic,.ba__after .ba__dot{color:#fff !important;background-color:currentColor;}
+.ba__after .ic{background-color:transparent;}
+.am,.nb,.eyebrow,.hero h1 .am,.h2 .am,.band q .am,.cta h2 .am{color:#D4570F !important;}
+.eyebrow{background:#fbeee4;border-color:rgba(212,87,15,.35);}
 </style>
 </head>
 <body>

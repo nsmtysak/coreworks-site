@@ -21,15 +21,15 @@
 :root{
   --blue:#E8631A;
   --blue-dark:#c9530f;
-  --amber:#FF8A3D;
-  --amber-2:#E8631A;
+  --amber:#E8631A;
+  --amber-2:#C9530F;
   --ink:#0a0c0f;
   --ink-2:#11151a;
   --bg:#f5f3ee;
   --surface:#ffffff;
   --text:#1b222c;
   --text-sub:#4a5563;
-  --text-faint:#8a8f98;
+  --text-faint:#6b7280;
   --border:#e3ded4;
   --green:#E8631A;
   --red:#8a8f98;
@@ -342,7 +342,7 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .foot{background:#f6f5f2;color:var(--text-faint);border-top:1px solid var(--border);}
 .sec--dark .tag{color:var(--blue);}
 .hero__scrim{background:linear-gradient(95deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 38%,rgba(255,255,255,.45) 70%,rgba(255,255,255,.12) 100%);}
-@media(max-width:860px){.hero__scrim{background:linear-gradient(0deg,rgba(255,255,255,.98) 8%,rgba(255,255,255,.9) 55%,rgba(255,255,255,.72) 100%);}}
+@media(max-width:860px){.hero__scrim{background:linear-gradient(0deg,rgba(255,255,255,.98) 8%,rgba(255,255,255,.94) 55%,rgba(255,255,255,.88) 100%);}}
 .band__scrim{background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.84));}
 .cta__scrim{background:linear-gradient(120deg,rgba(255,255,255,.95),rgba(246,245,242,.88));}
 .cta__contact{color:var(--text-sub);}
@@ -350,6 +350,13 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .spot__badge{background:rgba(255,255,255,.94);color:var(--text);}
 .float--top{background:#fff;color:var(--text);}
 .float--top .ic{color:var(--blue);}
+
+/* ===== 読みやすさ修正（2026-09-26） ===== */
+.ba__after,.ba__after *{color:#fff !important;}
+.ba__after .ic,.ba__after .ba__dot{color:#fff !important;background-color:currentColor;}
+.ba__after .ic{background-color:transparent;}
+.am,.nb,.eyebrow,.hero h1 .am,.h2 .am,.band q .am,.cta h2 .am{color:#D4570F !important;}
+.eyebrow{background:#fbeee4;border-color:rgba(212,87,15,.35);}
 </style>
 </head>
 <body>
