@@ -26,9 +26,9 @@
     --ink:#1b222c;
     --ink-soft:#4a5563;
     --rule:#e3ded4;
-    --coral:#FF6B5B;
-    --coral-d:#E8503F;
-    --amber:#FFB547;
+    --coral:#E8631A;
+    --coral-d:#c9530f;
+    --amber:#FF8A3D;
     --body:'Noto Sans JP',system-ui,sans-serif;
     --latin:'Poppins','Noto Sans JP',sans-serif;
   }
@@ -51,22 +51,22 @@
   .hd a.cta:hover{transform:translateY(-2px);}
 
   /* buttons */
-  .btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:54px;font-size:16px;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(135deg,#ff8a6b,var(--coral) 45%,var(--coral-d));padding:0 34px;border-radius:999px;box-shadow:0 14px 34px -12px rgba(255,107,91,.75);transition:transform .2s,box-shadow .2s;}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(255,107,91,.9);}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;min-height:54px;font-size:16px;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(135deg,#FF8A3D,var(--coral) 45%,var(--coral-d));padding:0 34px;border-radius:999px;box-shadow:0 14px 34px -12px rgba(232,99,26,.75);transition:transform .2s,box-shadow .2s;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(232,99,26,.9);}
   .btn-ghost{display:inline-flex;align-items:center;min-height:54px;padding:0 26px;border-radius:999px;font-size:15px;font-weight:700;color:var(--text);text-decoration:none;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3);transition:box-shadow .2s;}
   .btn-ghost:hover{box-shadow:inset 0 0 0 1.5px #fff;}
 
   /* hero */
   .hero{position:relative;padding:88px 0 96px;overflow:hidden;isolation:isolate;
-    background:radial-gradient(900px 560px at 85% -10%,rgba(255,107,91,.26),transparent 62%),radial-gradient(700px 480px at -10% 110%,rgba(255,181,71,.14),transparent 60%),var(--bg);}
+    background:radial-gradient(900px 560px at 85% -10%,rgba(232,99,26,.26),transparent 62%),radial-gradient(700px 480px at -10% 110%,rgba(255,138,61,.14),transparent 60%),var(--bg);}
   .hero .kicker{display:inline-block;padding:6px 14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--sub);margin-bottom:26px;}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
   .hero h1{font-weight:900;font-size:clamp(34px,4.6vw,58px);line-height:1.26;letter-spacing:.01em;}
-  .hero h1 .hl{color:var(--coral);background:linear-gradient(transparent 70%,rgba(255,107,91,.3) 70%);}
+  .hero h1 .hl{color:var(--coral);background:linear-gradient(transparent 70%,rgba(232,99,26,.3) 70%);}
   .hero p.lead{margin-top:26px;font-size:16.5px;line-height:2;color:#d5dbe3;max-width:28em;}
   .hero .actions{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
   .hero-photo{position:relative;}
-  .hero-photo .frame{position:relative;z-index:2;border-radius:24px;overflow:hidden;aspect-ratio:4/3.4;border:1px solid rgba(255,255,255,.14);box-shadow:0 40px 80px -30px rgba(255,107,91,.55),0 0 0 8px rgba(255,255,255,.03);}
+  .hero-photo .frame{position:relative;z-index:2;border-radius:24px;overflow:hidden;aspect-ratio:4/3.4;border:1px solid rgba(255,255,255,.14);box-shadow:0 40px 80px -30px rgba(232,99,26,.55),0 0 0 8px rgba(255,255,255,.03);}
   .hero-photo .frame img{width:100%;height:100%;object-fit:cover;}
   .hero-photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));}
   .hero-photo .ribbon{position:absolute;z-index:3;left:-18px;bottom:26px;background:rgba(12,14,18,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font-weight:700;font-size:14px;padding:12px 18px 12px 16px;border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--coral);border-radius:12px;}
@@ -101,7 +101,7 @@
   .before-body .dash{color:var(--ink);font-weight:700;}
 
   /* entrust */
-  .entrust{text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(700px 400px at 50% 120%,rgba(255,107,91,.3),transparent 70%),var(--bg);}
+  .entrust{text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(700px 400px at 50% 120%,rgba(232,99,26,.3),transparent 70%),var(--bg);}
   .entrust .q{position:relative;z-index:2;font-weight:900;font-size:clamp(30px,5.2vw,58px);line-height:1.35;}
   .entrust .q .hl{color:var(--coral);}
   .entrust .sm{position:relative;z-index:2;margin:24px auto 0;font-size:16px;line-height:1.95;color:var(--sub);max-width:34em;}
@@ -121,7 +121,7 @@
   .gallery{background:var(--bg2);}
   .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;}
   .gal-card{border-radius:20px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:transform .3s,border-color .3s;}
-  .gal-card:hover{transform:translateY(-6px);border-color:rgba(255,107,91,.5);}
+  .gal-card:hover{transform:translateY(-6px);border-color:rgba(232,99,26,.5);}
   .gal-card .ph{aspect-ratio:4/3;overflow:hidden;}
   .gal-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
   .gal-card:hover .ph img{transform:scale(1.05);}
@@ -136,7 +136,7 @@
   .plan-head p{font-size:16px;color:var(--ink-soft);max-width:34em;margin-top:16px;}
   .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;}
   .plan{background:var(--paper2);border:1px solid var(--rule);border-radius:22px;padding:32px 26px;display:flex;flex-direction:column;position:relative;box-shadow:0 24px 48px -36px rgba(27,34,44,.5);}
-  .plan.feature{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 30px 60px -28px rgba(255,107,91,.55);transform:translateY(-8px);}
+  .plan.feature{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 30px 60px -28px rgba(232,99,26,.55);transform:translateY(-8px);}
   .plan .rank{font-family:var(--latin);font-weight:700;font-size:13px;letter-spacing:.1em;color:var(--coral-d);}
   .plan.feature .rank{color:var(--coral);}
   .plan .pname{font-weight:900;font-size:24px;margin:8px 0 2px;}
@@ -156,7 +156,7 @@
   .sub-note b{font-weight:700;color:var(--ink);}
 
   /* way */
-  .way{overflow:hidden;isolation:isolate;background:radial-gradient(600px 420px at 90% 30%,rgba(255,181,71,.16),transparent 65%),var(--bg);}
+  .way{overflow:hidden;isolation:isolate;background:radial-gradient(600px 420px at 90% 30%,rgba(255,138,61,.16),transparent 65%),var(--bg);}
   .way-inner{position:relative;z-index:2;max-width:34em;}
   .way-inner p{font-size:16.5px;line-height:2.05;color:var(--sub);margin-top:18px;}
   .way-inner .dash{color:var(--text);font-weight:700;}
@@ -169,7 +169,7 @@
   .step .sn{display:none;}
   .step h5{font-weight:900;font-size:17px;margin:8px 0 8px;}
   .step p{font-size:13px;line-height:1.8;color:var(--sub);}
-  .step .opt{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;background:rgba(255,107,91,.16);color:var(--coral);padding:2px 9px;border-radius:999px;margin-top:8px;}
+  .step .opt{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;background:rgba(232,99,26,.16);color:var(--coral);padding:2px 9px;border-radius:999px;margin-top:8px;}
 
   /* faq */
   .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px;}
@@ -179,7 +179,7 @@
   .faq-item .a{margin-top:10px;font-size:14px;color:var(--ink-soft);line-height:1.95;}
 
   /* closing */
-  .closing{text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 50% 60%,rgba(255,107,91,.34),transparent 60%),var(--bg);}
+  .closing{text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 50% 60%,rgba(232,99,26,.34),transparent 60%),var(--bg);}
   .closing h2{position:relative;z-index:2;font-weight:900;font-size:clamp(30px,5.4vw,58px);line-height:1.32;}
   .closing h2 .u{color:var(--coral);}
   .closing p.s{position:relative;z-index:2;margin-top:24px;font-size:16.5px;color:#d5dbe3;}
@@ -219,12 +219,36 @@
 </head>
 <body>
 
-<header>
-  <div class="wrap hd">
-    <a class="brand" href="/" title="CoreWorks トップへ"><span class="logo"><img src="/assets/logo-light.png" alt="CoreWorks" width="117" height="34"></span><span class="svc">LP制作サービス</span></a>
-    <a class="cta" href="mailto:info@cw-app.jp?subject=LP制作の相談">相談する</a>
+<!--#header-->
+<header class="cw-header">
+  <div class="cw-header__in">
+    <a class="cw-logo" href="/"><img src="/assets/logo-light.png" alt="CoreWorks" width="124" height="36"></a>
+    <nav class="cw-nav" aria-label="メインメニュー">
+      <a href="/koji/">工事写真台帳</a>
+      <a href="/schedule/">予定実績共有</a>
+      <a href="/webchohyo/">Web帳票 自動DL</a>
+      <a href="/lp-service/" aria-current="page">LP制作</a>
+      <a href="/#works">制作実績</a>
+    </nav>
+    <a class="cw-btn cw-btn--sm" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
+    <details class="cw-menu">
+      <summary aria-label="メニューを開く"><span></span></summary>
+      <nav class="cw-menu__panel" aria-label="メニュー">
+        <a href="/">トップ</a>
+        <a href="/koji/">工事写真台帳アプリ</a>
+        <a href="/schedule/">予定・実績の共有アプリ</a>
+        <a href="/webchohyo/">Web帳票 自動ダウンロード</a>
+        <a href="/lp-service/" aria-current="page">LP制作サービス</a>
+        <a href="/juchu/">制作実績：受注実績照会</a>
+        <a href="/mitsumori/">制作実績：見積システム</a>
+        <a href="/unyo/">制作実績：運用システム</a>
+        <a href="/#cases">導入事例</a>
+        <a class="cw-btn" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
+      </nav>
+    </details>
   </div>
 </header>
+<!--/header-->
 
 <!-- HERO -->
 <section class="hero">
@@ -469,11 +493,11 @@
       </ul>
     </div>
     <div>
-      <h3>業務システム（導入実績）</h3>
+      <h3>業務システム（制作実績）</h3>
       <ul>
         <li><a href="/juchu/"><span class="cw-footer__dot" style="background:var(--c-juchu)"></span>受注実績照会</a></li>
         <li><a href="/mitsumori/"><span class="cw-footer__dot" style="background:var(--c-mitsumori)"></span>見積システム</a></li>
-        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>CoreWorks 運用システム</a></li>
+        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>運用システム</a></li>
       </ul>
     </div>
     <div>

@@ -22,13 +22,13 @@
   --cw-accent: #E8631A;
   --cw-accent2: #FF8A3D;
 
-  --c-koji: #F5A524;
-  --c-schedule: #3D8BFF;
-  --c-webchohyo: #2FBF71;
-  --c-lp: #FF6B5B;
-  --c-juchu: #22C3D6;
-  --c-mitsumori: #A78BFA;
-  --c-unyo: #F5C451;
+  --c-koji: var(--cw-accent2);
+  --c-schedule: var(--cw-accent2);
+  --c-webchohyo: var(--cw-accent2);
+  --c-lp: var(--cw-accent2);
+  --c-juchu: var(--cw-accent2);
+  --c-mitsumori: var(--cw-accent2);
+  --c-unyo: var(--cw-accent2);
 
   --cw-radius: 18px;
   --cw-max: 1160px;

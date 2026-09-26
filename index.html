@@ -145,13 +145,13 @@
 .mock-web {
   position: absolute; inset: 0; padding: 72px 28px 28px;
   background:
-    radial-gradient(circle at 80% 10%, rgba(47,191,113,.28), transparent 55%),
-    linear-gradient(160deg, #0f1a15, #0b0f0d);
+    radial-gradient(circle at 80% 10%, rgba(232,99,26,.28), transparent 55%),
+    linear-gradient(160deg, #11151a, #0b0d10);
   display: flex; flex-direction: column; justify-content: center;
 }
 .mock-web__title { font-size: 13px; color: var(--cw-muted); display: flex; align-items: center; gap: 8px; }
-.mock-web__title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c-webchohyo); box-shadow: 0 0 0 4px rgba(47,191,113,.25); animation: pulse 1.6s infinite; }
-@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(47,191,113,0); } }
+.mock-web__title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c-webchohyo); box-shadow: 0 0 0 4px rgba(232,99,26,.25); animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(232,99,26,0); } }
 .mock-web ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 8px; }
 .mock-web li {
   display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 10px;
@@ -168,8 +168,8 @@
 .mock-lp {
   position: absolute; inset: 0; padding: 72px 28px 28px;
   background:
-    radial-gradient(circle at 20% 90%, rgba(255,107,91,.25), transparent 55%),
-    linear-gradient(160deg, #1a1210, #0f0b0a);
+    radial-gradient(circle at 20% 90%, rgba(232,99,26,.25), transparent 55%),
+    linear-gradient(160deg, #11151a, #0b0d10);
   display: grid; grid-template-columns: 1fr 1.25fr; gap: 16px; align-items: center;
 }
 .mock-lp__page { border-radius: 10px; padding: 12px; height: 100%; max-height: 230px; display: flex; flex-direction: column; gap: 7px; }
@@ -177,9 +177,9 @@
 .mock-lp__page--b { background: #2a2a2c; opacity: .75; }
 .mock-lp__page--b small { color: #8a8a8f; }
 .mock-lp__page--b i { display: block; height: 7px; border-radius: 3px; background: #444448; }
-.mock-lp__page--a { background: #fbf7f2; box-shadow: 0 20px 40px -18px rgba(255,107,91,.6); }
+.mock-lp__page--a { background: #fbf7f2; box-shadow: 0 20px 40px -18px rgba(232,99,26,.6); }
 .mock-lp__page--a small { color: var(--c-lp); }
-.mock-lp__hero { flex: 1; min-height: 64px; border-radius: 7px; background: linear-gradient(135deg, #ff8a3d, #ff6b5b 60%, #c2410c); position: relative; }
+.mock-lp__hero { flex: 1; min-height: 64px; border-radius: 7px; background: linear-gradient(135deg, #ff8a3d, #E8631A 60%, #c2410c); position: relative; }
 .mock-lp__hero::after { content: ""; position: absolute; left: 10px; bottom: 10px; width: 60%; height: 9px; border-radius: 3px; background: rgba(255,255,255,.9); box-shadow: 0 -14px 0 -1px rgba(255,255,255,.7); }
 .mock-lp__row { display: flex; gap: 6px; }
 .mock-lp__row i { flex: 1; height: 26px; border-radius: 5px; background: #f0e6dc; }
@@ -313,7 +313,7 @@
       <a href="/schedule/">予定実績共有</a>
       <a href="/webchohyo/">Web帳票 自動DL</a>
       <a href="/lp-service/">LP制作</a>
-      <a href="/#works">導入実績</a>
+      <a href="/#works">制作実績</a>
     </nav>
     <a class="cw-btn cw-btn--sm" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
     <details class="cw-menu">
@@ -324,9 +324,9 @@
         <a href="/schedule/">予定・実績の共有アプリ</a>
         <a href="/webchohyo/">Web帳票 自動ダウンロード</a>
         <a href="/lp-service/">LP制作サービス</a>
-        <a href="/juchu/">導入実績：受注実績照会</a>
-        <a href="/mitsumori/">導入実績：見積システム</a>
-        <a href="/unyo/">導入実績：運用システム</a>
+        <a href="/juchu/">制作実績：受注実績照会</a>
+        <a href="/mitsumori/">制作実績：見積システム</a>
+        <a href="/unyo/">制作実績：運用システム</a>
         <a href="/#cases">導入事例</a>
         <a class="cw-btn" href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">相談する</a>
       </nav>
@@ -458,7 +458,7 @@
         </a>
       </div>
 
-      <h3 class="grp" id="works">お客様ごとに作った業務システム <small>導入実績</small></h3>
+      <h3 class="grp" id="works">業務システム <small>制作実績</small></h3>
       <div class="cards cards--works">
         <a class="card card--juchu cw-reveal" href="/juchu/">
           <div class="card__media">
@@ -488,12 +488,12 @@
         </a>
         <a class="card card--unyo cw-reveal" href="/unyo/">
           <div class="card__media">
-            <span class="card__label">自社導入</span>
+            <span class="card__label">制作実績</span>
             <img src="/assets/img/works/unyo-top.jpg" alt="運用システムの「今日やること」画面" width="1280" height="1000" loading="lazy">
           </div>
           <div class="card__body">
-            <h3>CoreWorks 運用システム</h3>
-            <span class="card__who">自社導入</span>
+            <h3>運用システム</h3>
+            <span class="card__who">見積から請求までの業務システム</span>
             <p>見積・受注・納品・請求・発注を案件でつなぎ、請求漏れや未入金をトップ画面で自動検知します。</p>
             <div class="card__gain"><b>なくした無駄</b>書類の散在・請求漏れの不安</div>
             <span class="card__more">詳しく見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -598,11 +598,11 @@
       </ul>
     </div>
     <div>
-      <h3>業務システム（導入実績）</h3>
+      <h3>業務システム（制作実績）</h3>
       <ul>
         <li><a href="/juchu/"><span class="cw-footer__dot" style="background:var(--c-juchu)"></span>受注実績照会</a></li>
         <li><a href="/mitsumori/"><span class="cw-footer__dot" style="background:var(--c-mitsumori)"></span>見積システム</a></li>
-        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>CoreWorks 運用システム</a></li>
+        <li><a href="/unyo/"><span class="cw-footer__dot" style="background:var(--c-unyo)"></span>運用システム</a></li>
       </ul>
     </div>
     <div>
