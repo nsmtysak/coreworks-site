@@ -215,6 +215,14 @@
   @media(max-width:480px){
     .hero{padding-top:18px;}
   }
+
+/* ===== 項目はアイコンを使わず、罫線と番号で見せる（2026-09-26） ===== */
+.steps{column-gap:32px;row-gap:0;}
+.step{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:20px 0 28px !important;}
+.after-list li{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:18px 0 18px 26px !important;margin:0 !important;position:relative;}
+.after-list li::before{content:"";position:absolute;left:0;width:14px;height:2px;background:#D4570F;top:32px;}
+.faq-grid{gap:0 40px;}
+.faq-item{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:22px 0 !important;}
 </style>
 </head>
 <body>

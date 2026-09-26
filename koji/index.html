@@ -357,6 +357,20 @@ h1,h2,h3,h4{font-weight:900;line-height:1.32;letter-spacing:.01em;}
 .ba__after .ic{background-color:transparent;}
 .am,.nb,.eyebrow,.hero h1 .am,.h2 .am,.band q .am,.cta h2 .am{color:#D4570F !important;}
 .eyebrow{background:#fbeee4;border-color:rgba(212,87,15,.35);}
+
+/* ===== 項目はアイコンを使わず、罫線と番号で見せる（2026-09-26） ===== */
+.feat-grid,.steps{counter-reset:it;column-gap:48px;row-gap:0;}
+.feat,.step{counter-increment:it;background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:24px 0 32px !important;overflow:visible;}
+.feat::before,.step::before{content:counter(it,decimal-leading-zero) !important;position:static !important;display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:#D4570F;line-height:1.2;font-size:13px !important;margin:0 0 12px;-webkit-text-stroke:0;}
+.feat__ic,.step__ic,.painlist .ic,.spotlist .ck,.ba__list .ic,.hero__chips .ic{display:none !important;}
+.feat h3,.step h3{font-size:18px;line-height:1.5;margin-bottom:8px;}
+.painlist{gap:0;}
+.painlist li,.spotlist li,.ba__list li{position:relative;padding-left:26px;}
+.painlist li{padding-top:18px;padding-bottom:18px;border-top:1px solid rgba(27,34,44,.16);}
+.painlist li::before{content:"";position:absolute;left:0;width:14px;height:2px;background:#D4570F;top:32px;}
+.spotlist li::before,.ba__list li::before{content:"";position:absolute;left:0;width:14px;height:2px;background:#D4570F;top:.8em;}
+.ba__after .ba__list li::before{background:#fff;}
+.ba__before .ba__list li::before{background:#9aa1ab;}
 </style>
 </head>
 <body>

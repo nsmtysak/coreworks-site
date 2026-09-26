@@ -124,3 +124,13 @@
   .wk-pains, .wk-flow, .wk-feats, .wk-more__list { grid-template-columns: 1fr; }
   .wk-cta .cw-btn { width: 100%; }
 }
+
+/* ===== 項目はアイコンを使わず、罫線と番号で見せる（2026-09-26） ===== */
+.wk-pains,.wk-feats,.wk-flow{column-gap:40px;row-gap:0;}
+.wk-pain,.wk-feat,.wk-step{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:24px 0 30px !important;}
+.wk-feats{counter-reset:ft;}
+.wk-feat{counter-increment:ft;}
+.wk-feat::before{content:counter(ft,decimal-leading-zero);display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:#D4570F;line-height:1.2;}
+.wk-feat svg{display:none;}
+.wk-feat h3{margin-top:12px;}
+.wk-step:not(:last-child)::after{display:none;}

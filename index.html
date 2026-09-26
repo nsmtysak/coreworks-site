@@ -300,6 +300,16 @@
   .grp { margin-top: 44px; font-size: 16px; flex-wrap: wrap; }
   .grp::after { display: none; }
 }
+
+/* ===== 項目はアイコンを使わず、罫線と番号で見せる（2026-09-26） ===== */
+.pains{gap:0 40px;}
+.pain{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:20px 0 20px 26px !important;position:relative;}
+.pain::before{content:"";position:absolute;left:0;width:14px;height:2px;background:#D4570F;top:33px;}
+.pain .check,.chip i{display:none;}
+.steps{gap:0 40px;}
+.step{background:none !important;border:0 !important;border-top:1px solid rgba(27,34,44,.16) !important;border-radius:0 !important;box-shadow:none !important;transform:none !important;padding:24px 0 8px !important;overflow:visible;}
+.step::before{content:"STEP 0" counter(s) !important;position:static !important;display:block;font-size:13px;font-weight:700;letter-spacing:.14em;color:#D4570F;line-height:1.2;-webkit-text-stroke:0 !important;font-size:13px !important;}
+.step b{display:none;}
 </style>
 </head>
 <body class="cw-dark">
