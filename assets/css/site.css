@@ -210,3 +210,30 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--cw-header-h) + 8p
 /* 明るい記事ページ（事例など）に載せたときの上書き防止 */
 .cw-footer p { color: var(--cw-muted); }
 .cw-header *, .cw-footer * { box-sizing: border-box; }
+
+/* ---------- 各LPの「こんな無駄が、消えました。」（2026-09-26） ---------- */
+.cw-case-sec { background: var(--cw-paper); color: var(--cw-ink); padding: 96px 0; font-family: var(--cw-font); line-height: 1.8; }
+.cw-case-sec * { box-sizing: border-box; }
+.cw-case-sec .cw-h2 { color: var(--cw-ink); }
+.cw-case {
+  margin-top: 36px; padding: 32px; border-radius: 20px; background: #fff;
+  border: 1px solid var(--cw-rule); box-shadow: 0 24px 48px -40px rgba(27,34,44,.45);
+}
+.cw-case__who { font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--cw-ink2); }
+.cw-case__ba { margin-top: 18px; display: grid; grid-template-columns: 1fr 36px 1fr; gap: 12px; align-items: stretch; }
+.cw-case__ba > div:not(.cw-case__arrow) { padding: 20px 22px; border-radius: 14px; font-size: 15px; line-height: 1.85; }
+.cw-case__b { background: #f1eee8; color: var(--cw-ink2); }
+.cw-case__a { background: #fbeee4; color: var(--cw-ink); }
+.cw-case__ba small { display: block; margin-bottom: 6px; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.cw-case__b small { color: #6b6558; }
+.cw-case__a small { color: var(--cw-accent-ink); }
+.cw-case__arrow { display: grid; place-items: center; color: var(--cw-accent); font-size: 22px; font-weight: 700; }
+.cw-case__link { display: inline-block; margin-top: 20px; font-weight: 700; color: var(--cw-accent-ink); text-decoration: none; }
+.cw-case__link:hover { text-decoration: underline; }
+.cw-case__note { margin: 16px 0 0; font-size: 12.5px; color: var(--cw-dim); }
+@media (max-width: 760px) {
+  .cw-case-sec { padding: 64px 0; }
+  .cw-case { padding: 22px 18px; }
+  .cw-case__ba { grid-template-columns: 1fr; }
+  .cw-case__arrow { transform: rotate(90deg); height: 24px; }
+}

@@ -81,6 +81,11 @@
 .cta-box{background:#f6f5f2;color:var(--ink);border:1px solid var(--line);}
 .cta-box p{color:var(--muted);}
 .btn.ghost{background:#fff;color:var(--ink);border:1.5px solid rgba(27,34,44,.2);}
+
+/* チェックアイコンは使わず短い線で（2026-09-26） */
+ul.checks li svg{display:none;}
+ul.checks li{position:relative;padding-left:24px;}
+ul.checks li::before{content:"";position:absolute;left:0;top:1.35em;width:14px;height:2px;background:#D4570F;}
 </style>
 </head>
 <body>
@@ -200,6 +205,8 @@
         <li><a href="/">トップ</a></li>
         <li><a href="/cases/koji-shashin-daicho.html">事例：工事写真のExcel貼り付け</a></li>
         <li><a href="/cases/webchohyo-jido-dl.html" aria-current="page">事例：帳票の手作業ダウンロード</a></li>
+        <li><a href="/cases/juchu-uriage-shukei.html">事例：売上と利益の手集計</a></li>
+        <li><a href="/cases/mitsumori-sakusei.html">事例：仕入見積の打ち直し</a></li>
         <li><a href="mailto:info@cw-app.jp?subject=CoreWorksへの相談">info@cw-app.jp</a></li>
       </ul>
     </div>
